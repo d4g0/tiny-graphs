@@ -33,7 +33,7 @@ Based on "Introduction to algorithms by Thomas H. Cormen, Charles E. Leiserson, 
     -   `tempNode` = shift `searchQueque`
     -   `adjacentes` = getAdjacentes of the `tempNode`
     -   for every `adjacent_node`
-        -   if is not in visited nodes
+        -   if is not in visited node
             -   push `adjacent_node` to `searchQueque`
             -   push `adjacent_node` to `visited`
 
