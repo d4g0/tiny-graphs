@@ -1,3 +1,6 @@
+/**
+ * Adjacent List Representation of a directed Graph
+ */
 export class AdjacentList {
     constructor() {
         this.nodes = [];
@@ -69,6 +72,36 @@ export class AdjacentList {
         return visited;
     }
 
+    deepFirstSearch() {
+
+        // df tree oulet
+        var visited = [];
+
+        for (let i = 0; i < this.nodes.length; i++) {
+            // console.log(`searching in ${this.nodes[i]}`)
+            // if the current node is not in visited
+            if (!(search(visited, this.nodes[i]) > -1)) {
+                dfsVisit(this, this.nodes[i])
+            }
+        }
+
+        function dfsVisit(graph, node) {
+            visited.push(node);
+            const adjacentes = graph.getAdjacentes(node);
+            for (let i = 0; i < adjacentes.length; i++) {
+                // if not visited  the node call again it self with it
+                if (!(search(visited, adjacentes[i]) > -1)) {
+                    dfsVisit(graph, adjacentes[i]);
+                }
+            }
+            
+        }
+
+
+        return visited;
+
+    }
+
 }
 
 function search(nodes = [0, 1], node = 0) {
@@ -79,12 +112,3 @@ function search(nodes = [0, 1], node = 0) {
 }
 
 
-var nodes = ['a', 'b', 'c', 'd']
-
-var edges = [
-
-    /* a */[],
-    /* b */[],
-    /* c */[],
-    /* d */[]
-]
