@@ -21,21 +21,21 @@ Based on "Introduction to algorithms by Thomas H. Cormen, Charles E. Leiserson, 
 ```
 
 ## BreadFristSearch
--   create visited queque
--   call auxiliarBFS with the node
--   return visited queque
+-   create `visited` queque
+-   call `auxiliarBFS` with the `node`
+-   return `visited` queque
 
 ### AuxiliadBFS
--   push node in the visited queque
--   create searchQueque
--   push node to search queque
--   while searchQueque not empty
-    -   tempNode = shift queque
-    -   adjacentes = getAdjacentes of the tempNode
-    -   for every adjacent_node
+-   push `node` in the `visited` queque
+-   create `searchQueque`
+-   push `node` to `searchQueque`
+-   while `searchQueque` not empty
+    -   `tempNode` = shift `searchQueque`
+    -   `adjacentes` = getAdjacentes of the `tempNode`
+    -   for every `adjacent_node`
         -   if is not in visited nodes
-            -   push adjacent_node to searchQueque
-            -   push adjacent_node to visited
+            -   push `adjacent_node` to `searchQueque`
+            -   push `adjacent_node` to `visited`
 
 
 ## Deep First Search
